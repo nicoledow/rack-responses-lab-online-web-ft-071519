@@ -1,9 +1,9 @@
-class Application
+class Application(current_time=Time.new)
   
   def call
     resp = Rack::Response.new
     
-    current_time = Time.new
+    #current_time = Time.new
     
     if current_time >= 12
       resp.write "Good Afternoon!"
